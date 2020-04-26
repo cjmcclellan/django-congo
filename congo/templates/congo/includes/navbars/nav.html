@@ -18,27 +18,28 @@
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
+        {% for url_name, url in urls.items %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:current_issue' %}">Current Issue
+        <a class="nav-link" href="{% url {{ url }}%}">{{ url_name }}
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:about' %}">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'main:subscribe' %}">Subscribe</a>
-      </li>
-
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="{% url 'main:about' %}">About</a>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="{% url 'main:subscribe' %}">Subscribe</a>#}
+{#      </li>#}
+        {% endfor %}
       <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">For Authors</a>
-        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+{#      <li class="nav-item dropdown">#}
+{#        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"#}
+{#          aria-haspopup="true" aria-expanded="false">For Authors</a>#}
+{#        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">#}
 {#          <a class="dropdown-item" href="{% url 'main:prepare' %}">Preparing Your Manuscript</a>#}
-          <a class="dropdown-item" href="{% url 'main:charges' %}">Publication Charges</a>
-          <a class="dropdown-item" href="{% url 'main:submit' %}">Submit Your Research</a>
-        </div>
-      </li>
+{#          <a class="dropdown-item" href="{% url 'main:charges' %}">Publication Charges</a>#}
+{#          <a class="dropdown-item" href="{% url 'main:submit' %}">Submit Your Research</a>#}
+{#        </div>#}
+{#      </li>#}
 
     </ul>
     <!-- Links -->
