@@ -1,0 +1,84 @@
+{#change the posistion to sticky to keep the navbar in place so that the modal will not be greyed out#}
+<nav class="navbar navbar-expand-lg border-bottom border-dark navbar-light fixed-top py-1" style="background-color: #c8cbcf; border-width: thick">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#weknowNavBar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    {% load staticfiles %}
+{#    <img alt="Logo" href='/' class="navbar-brand" src="{% static 'global_website_logos/red_website_logo.png' %}" width="35" height="46">#}
+    <img alt="Logo" href='/' class="navbar-brand" src="{% static 'global_website_logos/BlenderRender_DeepSim_Logo_black.png' %}" width='75' style="padding-bottom: 0px;padding-top: 0px">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item float-right">
+            {% if user.is_authenticated %}
+                <a href="/accounts/logout/"><button class="btn btn-sm btn-secondary"> Logout </button></a>
+            {% endif %}
+        </li>
+    </ul>
+{#    <a class="navbar-brand" href="/"><span style="font-weight: 200; font-family: Helvetica, sans-serif">Deep</span><span style="font-weight: 700; font-family: Arial, sans-serif">Sim</span></a>#}
+{#    <div class="collapse navbar-collapse" id="weknowNavBar">#}
+{#        <ul class="navbar-nav ml-auto">#}
+{#                <li class="nav-item float-right">DeepSim</li>#}
+{#            {% if user.is_authenticated %}#}
+{#                <li class="nav-item" style="padding-right: 8px"> {% include 'includes/buttons/profileButton.html' %}</li>#}
+{#                <li class="nav-item"> {% include 'includes/buttons/logoutButton.html' %}</li>#}
+{#                <li class="nav-item">{% include 'notifications/message_notification_menu.html' %}</li>#}
+{#                <li class="nav-item">{% include 'includes/buttons/profile_dropdown.html' %}</li>#}
+{#            {% else %}#}
+{#                <li class="nav-item" style="padding-right: 8px">{%include 'includes/buttons/signupModal.html' %}</li>#}
+{#                <li class="nav-item">{%include 'includes/buttons/loginLink.html' %}</li>#}
+{#           {% endif %}#}
+{#        </ul>#}
+{#    </div>#}
+  </nav>
+
+{#{% if user.is_authenticated %}#}
+{#{% include 'includes/buttons/logout_modal_content.html' %}#}
+{#{% else %}#}
+{#{% include 'includes/buttons/signup_modal_content.html' %}#}
+{#{% endif %}#}
+
+
+{#<nav class="navbar fixed-top navbar-dark bg-dark">#}
+{#    <div class="container-fluid">#}
+{#    <form class="form-inline">#}
+{#          Get the webiste logo and name#}
+{#        {% load staticfiles %}#}
+{#        <img alt="Logo" href='/' class="navbar-brand" src="{% static 'global_website_logos/Website_logo_small.png' %}">#}
+{#        <a class="navbar-brand" href="/">WeKnow</a>#}
+{#            <button class="btn-success">Hello</button>#}
+{#            {% if user.is_authenticated %}#}
+{#                <li style="padding-right: 8px" class="nav-item">#}
+{#                    {% include 'includes/buttons/profileButton.html' %}#}
+{#                </li>#}
+{#                <li class="nav-item">{% include 'includes/buttons/logoutButton.html' %}</li>#}
+{#            {% else %}#}
+{##}
+{#            <li style="padding-right: 8px">{%include 'includes/buttons/signupModal.html' %}</li>#}
+{#            <li>{%include 'includes/buttons/loginLink.html' %}</li>#}
+{#           {% endif %}#}
+{#        </ul>#}
+{#    </form>#}
+{#    </div>#}
+{#  </nav>#}
+
+
+{#    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">>#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#    </button>#}
+{# <div class="navbar-collapse" id="myNavbar">#}
+{#      <form class="form-inline">#}
+{#        <button class="btn-success">Hello</button>#}
+{#        <ul style="padding-right: 15%" class="navbar-nav">#}
+{##}
+{#            {% if user.is_authenticated %}#}
+{#                <li style="padding-right: 8px" class="nav-item">#}
+{#                    {% include 'includes/buttons/profileButton.html' %}#}
+{#                </li>#}
+{#                <li class="nav-item">{% include 'includes/buttons/logoutButton.html' %}</li>#}
+{##}
+{#            {% else %}#}
+{#            <li style="padding-right: 8px">{%include 'includes/buttons/signupModal.html' %}</li>#}
+{#            <li>{%include 'includes/buttons/loginLink.html' %}</li>#}
+{#           {% endif %}#}
+{#        </ul>#}
+{#      </form>#}
+{#      </div>#}

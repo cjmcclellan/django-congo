@@ -1,0 +1,10 @@
+{% extends 'dashboard/dashboard_base.html' %}
+
+{% block body_content %}
+
+    <h2>Oh boy, it seems you think you have access to this part.</h2>
+    {% load staticfiles %}
+    <img alt="Logo" href='/' class="navbar-brand" src="{% static 'various_images/permission-denied.jpg' %}">
+
+
+{% endblock %}

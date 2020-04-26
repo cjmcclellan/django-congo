@@ -1,0 +1,12 @@
+
+<tr><td><strong>Output Image Size: </strong></td> <td>
+    <select name="image_size">
+        {% for size in form.fields.image_size.choices %}
+            {% if size.1 == form.fields.image_size.intitial %}
+                <option value="{{ size.0 }}" selected> H={{ size.0 }} W={{ size.0 }}</option>
+            {% else %}
+                <option value="{{ size.0 }}"> H={{ size.0 }} W={{ size.0 }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+</td></tr>

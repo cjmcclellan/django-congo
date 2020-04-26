@@ -1,0 +1,58 @@
+
+<div class="card card-shadow">
+    <div class="card-header">
+        {% block card_header %}
+
+        {% endblock %}
+    </div>
+    <div class="card-body">
+        <div class="card-title">
+            {% block card_title %}
+            <h3 class="text-center title-2">Create A Task for this Consultant</h3>
+            {% endblock %}
+        </div>
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% block form_body %}
+            <div class="form-group">
+                <label for="task_name" class="control-label mb-1">Task Name</label>
+                <input id="id_task_name" name="task_name" type="text" class="form-control" aria-required="true"
+                       aria-invalid="false" aria-placeholder="{{ forms.task_name.help_text }}">
+                {% for error in forms.task_name.errors%}
+                    <p class="text-warning">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="form-group">
+                <label for="task_description" class="control-label mb-1">Task Description</label>
+                <textarea name="task_description" id="id_task_description" rows="9" placeholder="{{ forms.task_description.help_text }}" class="form-control"></textarea>
+                {% for error in forms.task_description.errors%}
+                    <p class="text-warning">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="form-group">
+                <label for="due_date" class="control-label mb-1">Due Date</label>
+                <input class="form-control" type="date" id="id_due_date" name="due_date" aria-placeholder="{{ forms.due_date.help_text }}">
+                {% for error in forms.due_date.errors%}
+                    <p class="text-warning">{{ error }}</p>
+                {% endfor %}
+            </div>
+             <div class="form-group">
+                <label for="extra_descriptions" class="control-label mb-1">Extra Descriptions</label>
+                 <input type="file" id="id_extra_descriptions" name="extra_descriptions" class="form-control-file">
+                 {% for error in forms.extra_descriptions.errors%}
+                    <p class="text-warning">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div>
+
+            {% endblock %}
+            {% block form_button %}
+                <button id="submit_form" type="submit" class="btn btn-lg btn-info btn-block">
+                    <span id="payment-button-amount">Submit Request</span>
+                </button>
+            {% endblock %}
+            </div>
+        </form>
+    </div>
+</div>
