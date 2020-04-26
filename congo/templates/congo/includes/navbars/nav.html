@@ -18,9 +18,9 @@
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-        {% for url_name, url in urls.items %}
+        {% for url_name, url_path in urls.items %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url {{ url }}%}">{{ url_name }}
+        <a class="nav-link" href="{% url url_path %}">{{ url_name }}
         </a>
       </li>
 {#      <li class="nav-item">#}
