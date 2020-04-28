@@ -55,15 +55,24 @@
 </nav>
 <!--/.Navbar-->
 
-<script>
+  // navbar = document.getElementById("MainNav");
+  // var i;
+  // for (i = 0; i < navbar.children[0].children.length; i++){
+  //     console.log(navbar.children[0].children[i]);
+  //     console.log(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_"));
+  //     console.log(window.location.href.includes(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_")));
+  //     if (window.location.href.includes(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_"))){
+  //         navbar.children[0].children[i].className = "nav-item active";
+  //      }
+  // }
+    <script>
   navbar = document.getElementById("MainNav");
   var i;
   for (i = 0; i < navbar.children[0].children.length; i++){
-      console.log(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_"));
-      console.log(window.location.href.includes(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_")));
-      if (window.location.href.includes(navbar.children[0].children[i].innerText.toLowerCase().replace(/ /g,"_"))){
+
+      if (window.location.href.includes(navbar.children[0].children[i].firstElementChild.attributes.href.value)){
           navbar.children[0].children[i].className = "nav-item active";
        }
-  }
+   }
 
-</script>
+    </script>
