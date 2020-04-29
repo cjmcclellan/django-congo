@@ -84,7 +84,7 @@
   <!-- Page Content -->
   <div class="container">
     <div class="row">
-        <div class="col-lg-10" style="padding-top: 50px">
+        <div {% block col_class %} class="col-lg-12" {% endblock %} style="padding-top: 50px">
       {% block content %}
       {% endblock %}
         </div>
